@@ -64,13 +64,13 @@
     <xacro:box_inertia m="1" w="${base_len}" h="${base_width}" d="0.01"/>
     <visual>
       <geometry>
-        <box size="${base_len} ${base_width} 0.02"/>
+        <box size="${base_len} ${base_width} 0.05"/>
       </geometry>
       <material name="black"/>
     </visual>
     <collision>
       <geometry>
-        <box size="${base_len} ${base_width} 0.01"/>
+        <box size="${base_len} ${base_width} 0.05"/>
       </geometry>
     </collision>
   </link>

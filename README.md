@@ -11,7 +11,7 @@
   According to objective, design a robot with two fingeres can move the different sizes of spheres to the destination. 
   
     
- MODEL
+ Model
   
   
   ![Capture model](https://user-images.githubusercontent.com/117764288/212550730-ead16d94-aafc-4113-aa00-a57f6f19e6f0.JPG)
@@ -63,9 +63,24 @@ For our course work we added  packages like Assesement world,myrobot and pde4430
 
 With help of teleoperation, can move the spheres in to the pen/destination point.While moving the robot, fingers/guide will help us to grab and guide  the spheres.
 
-Accordingly we need to adjsut the speed of linear / angular velocity while moving with balls.
+Accordingly we need to adjust the speed of linear / angular velocity while moving with balls.
 
 ![Captureggg](https://user-images.githubusercontent.com/117764288/212554126-8cd6e592-fb02-42c6-b643-b7efb5d30f52.JPG)
+
+## Video
+
+Youtubelink for video narration : 
+
+## Reference
+
+Following reference help me for this course work.
+
+http://wiki.ros.org/urdf/Tutorials
+
+
+## Conclusion
+
+ This course help me to add knowledge about URDF,Gazebo, Rviz and how we can pluggin the python files with packages, run the world.It gives more idea to make robot with physical properties.
 
 
 

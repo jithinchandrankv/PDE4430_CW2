@@ -28,6 +28,35 @@ For our course work we added  packages like Assesement world,myrobot and pde4430
 
   ![src](https://user-images.githubusercontent.com/117764288/212551390-add17eef-988c-4f7d-8e89-3dfb99b21bad.JPG)
   
+## Simulation
+
+   For simulation, in new terminal need to type "roslaunch myrobot myrobot.launch" , in this " myrobot" is package name and launch file is "myrobot.launch"
+   
+   ![myrobot launch](https://user-images.githubusercontent.com/117764288/212552600-e630df67-c0bb-457c-a16c-13458029aa48.JPG)
+   
+   in myrobot.launch file, called assessment_world, so world will create once myrobot.launch run.
+   
+   ![call](https://user-images.githubusercontent.com/117764288/212552919-9a4fefa7-4cb0-4de4-befe-3d39aab36d92.JPG)
+   
+   once run the terminal, RVIZ and Gazebo will open.In Gazebo, we can see robot with assessment world.
+   
+   ![assesssement world](https://user-images.githubusercontent.com/117764288/212553179-fd947cd8-3d4c-4c17-bb3b-efb0daab43c2.JPG)
+
+   
+
+   Then need to open new terminal  and type "roslaunch assessment_world objects.launch" for calling object in to the world.
+
+   ![object launch](https://user-images.githubusercontent.com/117764288/212553015-75de1198-1967-45a6-b2b4-177c97528032.JPG)
+   
+   once run the terminal by enter key,  3 spheres will generate in the world.
+   
+   ![with objects](https://user-images.githubusercontent.com/117764288/212553282-0894d768-d42f-4cb4-baca-322c172c3a31.JPG)
+
+   
+   To move the spheres, using teleop method.For that ,open new terminal 
+
+
+  
    
 
   

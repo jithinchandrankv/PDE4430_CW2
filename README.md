@@ -77,6 +77,8 @@ Following reference help me for this course work.
 
 http://wiki.ros.org/urdf/Tutorials
 
+https://kiranpalla.com/autonomous-navigation-ros-differential-drive-robot-simulation/describing-ros-robot-with-urdf/
+
 
 ## Conclusion
 

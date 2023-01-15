@@ -7,6 +7,7 @@
   <xacro:property name="base_wheel_gap" value="0.007"/>
   <xacro:property name="wheel_separation" value="0.30"/>
   <xacro:property name="wheel_joint_offset" value="0.07"/>
+  
 
   <xacro:property name="caster_wheel_radius" value="${wheel_radius/2}"/>
   <xacro:property name="caster_wheel_mass" value="0.002"/>
@@ -54,7 +55,7 @@
     <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-            <box size="0.001 0.001 0.001" />
+            <box size="0.001 0.001 0.05" />
         </geometry>
     </visual>
   </link>
@@ -64,13 +65,13 @@
     <xacro:box_inertia m="1" w="${base_len}" h="${base_width}" d="0.01"/>
     <visual>
       <geometry>
-        <box size="${base_len} ${base_width} 0.05"/>
+        <box size="${base_len} ${base_width} 0.1"/>
       </geometry>
       <material name="black"/>
     </visual>
     <collision>
       <geometry>
-        <box size="${base_len} ${base_width} 0.05"/>
+        <box size="${base_len} ${base_width} 0.1"/>
       </geometry>
     </collision>
   </link>
@@ -107,6 +108,11 @@
       <child link="${prefix}_wheel"/>
       <origin xyz="${wheel_joint_offset} ${((base_width/2)+base_wheel_gap)*reflect} -0.005" rpy="0 0 0"/>
     </joint>
+
+
+
+
+
   </xacro:macro>
 
   <!--Create Left & Right Wheel links/joints-->
@@ -120,7 +126,7 @@
       <geometry>
         <sphere radius="${caster_wheel_radius}"/>
       </geometry>
-      <material name="blue"/>
+      <material name="black"/>
     </visual>
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -138,6 +144,95 @@
     <child link="caster_wheel"/>
     <origin xyz="${caster_wheel_joint_offset} 0 -${caster_wheel_radius+0.005}" rpy="0 0 0"/>
   </joint>
+
+<!--left guide-->
+<link name="left_guide">
+  <xacro:box_inertia m="1" w="${base_len}" h="${base_width}" d="0.01"/>
+  <visual>
+    <geometry>
+      <box size="0.5 0.01 0.05"/>
+    </geometry>
+  <link name="left_guide">
+    <xacro:box_inertia m="1" w="${base_len}" h="${base_width}" d="0.01"/>
+    <visual>
+      <geometry>
+        <box size="0.5 0.01 0.05"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.5 0.01 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!--left_guide to left_guide Joint-->
+  <joint name="left_guide_joint" type="fixed">
+    <origin xyz="-0.2 0.5 0.0" rpy="0 0 0" />
+    <parent link="base_footprint"/>
+    <child link="left_guide" />
+  </joint>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.5 0.01 0.05"/>
+    </geometry>
+  </collision>
+</link>
+
+<!--left_guide to left_guide Joint-->
+<joint name="left_guide_joint" type="fixed">
+  <origin xyz="-0.2 0.15 0.06" rpy="0 0 0" />
+  <parent link="base_footprint"/>
+  <child link="left_guide" />
+</joint>
+
+<!--right guide-->
+<link name="right_guide">
+  <xacro:box_inertia m="1" w="${base_len}" h="${base_width}" d="0.01"/>
+  <visual>
+    <geometry>
+      <box size="0.5 0.01 0.05"/>
+    </geometry>
+  <link name="right_guide">
+    <xacro:box_inertia m="1" w="${base_len}" h="${base_width}" d="0.01"/>
+    <visual>
+      <geometry>
+        <box size="0.5 0.01 0.05"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.5 0.01 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!--right_guide to right_guide Joint-->
+  <joint name="right_guide_joint" type="fixed">
+    <origin xyz="-0.2 0.5 0.0" rpy="0 0 0" />
+    <parent link="base_footprint"/>
+    <child link="right_guide" />
+  </joint>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.5 0.01 0.05"/>
+    </geometry>
+  </collision>
+</link>
+
+<!--right_guide to right_guide Joint-->
+<joint name="right_guide_joint" type="fixed">
+  <origin xyz="-0.2 -0.15 0.06" rpy="0 0 0" />
+  <parent link="base_footprint"/>
+  <child link="right_guide" />
+</joint>
+ 
 
   <xacro:include filename="$(find myrobot)/urdf/myrobot_pluggin.xacro"/>
 

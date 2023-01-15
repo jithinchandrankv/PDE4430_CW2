@@ -8,18 +8,30 @@
 
 ## Design
 
-  According to objective, design a robot with two fingures can move the different sizes of spheres to the destination. 
+  According to objective, design a robot with two fingeres can move the different sizes of spheres to the destination. 
   
     
  MODEL
   
   
   ![Capture model](https://user-images.githubusercontent.com/117764288/212550730-ead16d94-aafc-4113-aa00-a57f6f19e6f0.JPG)
-
-
   
   
-  For that we added packages like myrobot and assesement world.
+  
+
+To move different size of spheres, created robot with 3 wheel,Its a balanced robot having 2 guides/fingers to guide balls to pen/destination.In that one wheel is caster wheel, it will help robot for balance while moving.Also added body support to attach visual system.
+
+## Packages
+
+For our course work we added  packages like Assesement world,myrobot and pde4430_cw1.
+
+
+  ![src](https://user-images.githubusercontent.com/117764288/212551390-add17eef-988c-4f7d-8e89-3dfb99b21bad.JPG)
+  
+   
+
+  
+
   
   
 

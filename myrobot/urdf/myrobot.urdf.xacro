@@ -109,10 +109,6 @@
       <origin xyz="${wheel_joint_offset} ${((base_width/2)+base_wheel_gap)*reflect} -0.005" rpy="0 0 0"/>
     </joint>
 
-
-
-
-
   </xacro:macro>
 
   <!--Create Left & Right Wheel links/joints-->
@@ -232,7 +228,50 @@
   <parent link="base_footprint"/>
   <child link="right_guide" />
 </joint>
- 
+
+<!--body guide-->
+<link name="body_guide">
+  <xacro:box_inertia m="1" w="${base_len}" h="${base_width}" d="0.01"/>
+  <visual>
+    <geometry>
+      <box size="0.2 0.2 0.3"/>
+    </geometry>
+  <link name="body_guide">
+    <xacro:box_inertia m="1" w="${base_len}" h="${base_width}" d="0.01"/>
+    <visual>
+      <geometry>
+        <box size="0.2 0.2 0.3"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.2 0.2 0.3"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <!--body_guide to body_guide Joint-->
+  <joint name="body_guide_joint" type="fixed">
+    <origin xyz="0 0 1" rpy="0 0 0" />
+    <parent link="base_footprint"/>
+    <child link="body_guide" />
+  </joint>
+    <material name="blue"/>
+  </visual>
+  <collision>
+    <geometry>
+      <box size="0.2 0.2 0.3"/>
+    </geometry>
+  </collision>
+</link>0
+
+<!--body_guide to body_guide Joint-->
+<joint name="body_guide_joint" type="fixed">
+  <origin xyz="0 0 0.2" rpy="0 0 0" />
+  <parent link="base_footprint"/>
+  <child link="body_guide" />
+</joint>  
 
   <xacro:include filename="$(find myrobot)/urdf/myrobot_pluggin.xacro"/>
 

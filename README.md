@@ -69,7 +69,9 @@ Accordingly we need to adjust the speed of linear / angular velocity while movin
 
 ## Video
 
-Youtubelink for video narration : 
+Youtubelink for video narration :simulation 1: https://youtu.be/_LtVlbOqMxw
+
+                                 simulation2 :https://youtu.be/GB9a5aUBDFk
 
 ## Reference
 

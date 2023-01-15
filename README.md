@@ -53,7 +53,21 @@ For our course work we added  packages like Assesement world,myrobot and pde4430
    ![with objects](https://user-images.githubusercontent.com/117764288/212553282-0894d768-d42f-4cb4-baca-322c172c3a31.JPG)
 
    
-   To move the spheres, using teleop method.For that ,open new terminal 
+   To move the spheres, using teleop method.For that ,open new terminal  and type "roslaunch myrobot rover_gazebo_teleop.launch" or type  " roslaunch pde4430_cw1 turtle_teleoperator.py"
+
+![teleop launch](https://user-images.githubusercontent.com/117764288/212553698-ed1a29f2-fb02-4834-afc8-5a0de98a0e67.JPG)
+
+ Press "enter"  key  and will run the program.And its shows which keys are used for the movement.
+ 
+ ![teleop key](https://user-images.githubusercontent.com/117764288/212553989-09075d28-347d-40d4-999a-b3bda64e352b.JPG)
+
+With help of teleoperation, can move the spheres in to the pen/destination point.While moving the robot, fingers/guide will help us to grab and guide  the spheres.
+
+Accordingly we need to adjsut the speed of linear / angular velocity while moving with balls.
+
+![Captureggg](https://user-images.githubusercontent.com/117764288/212554126-8cd6e592-fb02-42c6-b643-b7efb5d30f52.JPG)
+
+
 
 
   

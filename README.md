@@ -8,7 +8,20 @@
 
 ## Design
 
-  According to objective, design a robot with two fingure can move the different sizes of spheres to the destination. 
+  According to objective, design a robot with two fingures can move the different sizes of spheres to the destination. 
+  
+    
+ MODEL
+  
+  
+  ![Capture model](https://user-images.githubusercontent.com/117764288/212550730-ead16d94-aafc-4113-aa00-a57f6f19e6f0.JPG)
+
+
+  
+  
+  For that we added packages like myrobot and assesement world.
+  
+  
 
 
 
